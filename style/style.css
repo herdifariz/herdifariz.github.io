@@ -1,14 +1,16 @@
 body {
-  background-color: #FFC87B;
+  background-color: #EDEDED;
+  color: #636770;
+  font-family: Cascadia Code;
+  font-weight: 100;
 }
 
-.navbar {
-  background: #FFC87B;
+nav {
+  background-color: #C0C0C0;
+  font-weight: 500;
+  font-size: large;
 }
 
-/* 
-#54486E
-#FBF1E5
-#FFC87B
-#FAE3C4
-*/
+.home {
+  height: 200px;
+}
