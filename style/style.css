@@ -1,16 +1,47 @@
-body {
-  background-color: #EDEDED;
-  color: #636770;
-  font-family: Cascadia Code;
+html, body {
+  background-color: #8f8f8f;
+  font-family: 'Cascadia Code', 'Consolas';
   font-weight: 100;
+  scroll-behavior: smooth;
 }
 
-nav {
-  background-color: #C0C0C0;
+.navbar {
+  position: sticky;
+  background-color: #fff;
   font-weight: 500;
   font-size: large;
+  top: 0;
+}
+
+.click {
+  /* background-color: #888f8f8f; */
+  background-color: #000;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
 .home {
-  height: 200px;
+  height: 90vh;
 }
+
+.article {
+  height: 100vh;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.footer {
+  background-color: #303030;
+  text-align: center;
+  color: #8f8f8f;
+  padding: 10px;
+}
+
+
+
