@@ -1,3 +1,74 @@
+/* #4ecdc4
+*/
 body {
+  background-color: #292f36;
+  color: #f7fff7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  /* background-color: #333; */
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #4ecdc4;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+/* .topnav a.active {
+  background-color: #4ecdc4;
+  color: white;
+} */
+
+.container {
+  display: flex;
+}
+
+.side-content {
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 100px 10px; */
+  /* border: solid #4ecdc4; */
+  border-right: solid #4ecdc4;
+  margin: 100px 0;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.main-content {
+  flex: 70%;
+  padding: 100px 10px;
+  /* border: solid #4ecdc4; */
+  /* height: 1000px; */
+}
+
+footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  /* width: 100%; */
+  background-color: #4ecdc4;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
