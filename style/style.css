@@ -1,52 +1,56 @@
 /* #4ecdc4
 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #292f36;
   color: #f7fff7;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: monospace;
+  font-size: large;
   margin: 0;
   padding: 0;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  /* background-color: #333; */
-  overflow: hidden;
+header {
+  position:fixed;
+  background-color: #4ecdc4;
+  width: 100vw;
 }
 
-/* Style the links inside the navigation bar */
+.topnav {
+  display: flex;
+  justify-content: center;
+}
+
 .topnav a {
-  float: left;
-  color: #f2f2f2;
+  color: #292f36;
   text-align: center;
   padding: 14px 16px;
+  width: 15vw;
   text-decoration: none;
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #4ecdc4;
-  color: black;
+  background-color: #292f36;
+  color: #f7fff7;
 }
 
-/* Add a color to the active/current link */
-/* .topnav a.active {
-  background-color: #4ecdc4;
-  color: white;
-} */
-
-.container {
+.home {
   display: flex;
+  /* border: solid white; */
 }
 
-.side-content {
-  flex: 30%;
+.profile {
   display: flex;
+  flex: 40%;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  /* padding: 100px 10px; */
-  /* border: solid #4ecdc4; */
+  /* height: 80vh; */
   border-right: solid #4ecdc4;
   margin: 100px 0;
 }
@@ -55,20 +59,85 @@ body {
   border-radius: 50%;
 }
 
-.main-content {
-  flex: 70%;
-  padding: 100px 10px;
-  /* border: solid #4ecdc4; */
-  /* height: 1000px; */
+.about {
+  display: flex;
+  flex: 60%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: justify;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.content p {
+  padding: 20px;
+  text-align: center;
+}
+
+.skill-list {
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+  /* border: solid blue; */
+}
+
+.skill-item {
+  /* border: solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-item img, .exp-img {
+  height: 100px;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item {
+  margin: 20px 0;
+  display: flex;
 }
 
 footer {
-  /* position: fixed; */
   left: 0;
   bottom: 0;
-  /* width: 100%; */
   background-color: #4ecdc4;
-  color: white;
+  color: #292f36;
   text-align: center;
   padding: 10px;
+}
+
+@media screen and (max-width: 768px){
+  .home {
+    flex-direction: column;
+  }
+
+  .profile {
+    border-right: none;
+    /* border: solid white; */
+    margin-top: 100px;
+  }
+
+  .about {
+    border-bottom: solid #4ecdc4;
+    /* border: solid white; */
+    margin-bottom: 20px;
+    /* padding: 20px; */
+  }
+
+  .skill-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
