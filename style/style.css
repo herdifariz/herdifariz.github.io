@@ -20,12 +20,12 @@ header {
   width: 100vw;
 }
 
-.topnav {
+.nav {
   display: flex;
   justify-content: center;
 }
 
-.topnav a {
+.nav a {
   color: #292f36;
   text-align: center;
   padding: 14px 16px;
@@ -34,7 +34,7 @@ header {
   font-size: 17px;
 }
 
-.topnav a:hover {
+.nav a:hover {
   background-color: #292f36;
   color: #f7fff7;
 }
@@ -109,6 +109,15 @@ header {
   display: flex;
 }
 
+img {
+  transition: 500ms;
+}
+
+img:hover {
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
 footer {
   left: 0;
   bottom: 0;
@@ -116,6 +125,22 @@ footer {
   color: #292f36;
   text-align: center;
   padding: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7fff7; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #4ecdc4; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 @media screen and (max-width: 768px){
