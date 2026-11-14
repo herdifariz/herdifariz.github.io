@@ -79,13 +79,19 @@ jobs:
           path: dist/
 
       - name: Deploy to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+
           protocol: ftps
           port: 21
+          security: strict
+          timeout: 120000
+
           local-dir: ./dist/
           server-dir: ./
+
           dry-run: true
+          log-level: verbose
