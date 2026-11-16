@@ -8,8 +8,8 @@ export type Social = {
 export const profile = {
   name: "Herdi Andra Fata Rizqi",
   initials: "HF",
-  role: "Junior Programmer",
-  tagline: "Web & Cloud Development · Application Security",
+  role: "Junior Web Developer",
+  tagline: "Web & Cloud Development · Quality Assurance · Application Security",
   location: "Sleman, DI Yogyakarta, Indonesia",
   email: "fariz.herdi21@gmail.com",
   availability: "Open to opportunities",

@@ -15,6 +15,20 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Reveal key={project.title} delay={index * 70}>
             <article className="flex h-full flex-col rounded-2xl border border-white/5 bg-surface/80 p-6 transition hover:-translate-y-1 hover:border-accent/30 hover:shadow-[0_60px_120px_-80px_rgba(45,212,191,0.35)]">
+              <div className="-mx-6 -mt-6 mb-6 flex h-48 items-center justify-center overflow-hidden rounded-t-2xl bg-surface-2">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} project`}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <span className="font-mono text-xs text-zinc-600">
+                    Project image
+                  </span>
+                )}
+              </div>
+
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="font-mono text-xs text-accent">
@@ -58,10 +72,22 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="mt-auto flex items-center gap-2 pt-6 font-mono text-[11px] text-zinc-600">
+              <div className="mt-6 flex items-center justify-end">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="rounded-full border border-white/10 bg-white/10 px-4 py-2 font-mono text-xs text-zinc-300 hover:bg-white/20">
+                    View Project
+                  </button>
+                </a>
+              </div>
+
+              {/* <div className="mt-auto flex items-center gap-2 pt-6 font-mono text-[11px] text-zinc-600">
                 <span className="h-1 w-1 rounded-full bg-zinc-700" />
                 <span>Academic / Capstone project</span>
-              </div>
+              </div> */}
             </article>
           </Reveal>
         ))}

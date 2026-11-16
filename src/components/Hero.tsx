@@ -1,6 +1,6 @@
-import { FaArrowDown, FaEnvelope, FaLinkedin } from "react-icons/fa6";
+import { FaEnvelope, FaLinkedin } from "react-icons/fa6";
 import { profile } from "../data/profile";
-import profileImage from "../assets/profile.jpg";
+import profileImage from "../assets/foto.webp";
 import Reveal from "./Reveal";
 import SocialLinks from "./SocialLinks";
 
@@ -36,7 +36,7 @@ export default function Hero() {
             {profile.tagline}
           </p>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-zinc-400">
+          <p className="mt-6 max-w-xl text-justify leading-relaxed text-zinc-400">
             {profile.summary}
           </p>
 
@@ -49,7 +49,10 @@ export default function Hero() {
               Get in touch
             </a>
             <a
-              href={profile.socials.find((social) => social.icon === "linkedin")?.href}
+              href={
+                profile.socials.find((social) => social.icon === "linkedin")
+                  ?.href
+              }
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2.5 text-sm text-zinc-200 transition hover:border-accent/40 hover:text-accent"
@@ -66,7 +69,7 @@ export default function Hero() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="relative mx-auto w-full max-w-[260px]">
+          <div className="relative mx-auto w-full max-w-[300px]">
             <div
               className="absolute inset-0 translate-x-3 translate-y-3 rounded-3xl border border-accent/20"
               aria-hidden="true"
@@ -76,7 +79,7 @@ export default function Hero() {
               alt={`Portrait of ${profile.name}`}
               width={200}
               height={200}
-              className="relative aspect-square w-full rounded-3xl border border-white/10 object-cover grayscale transition duration-500 hover:grayscale-0"
+              className="relative w-full rounded-3xl border border-white/10 object-cover grayscale transition duration-500 hover:grayscale-0"
             />
             <div className="absolute -bottom-5 left-4 right-4 flex items-center justify-between rounded-xl border border-white/10 bg-ink/85 px-4 py-2.5 backdrop-blur">
               <span className="font-mono text-[11px] text-zinc-300">
@@ -87,14 +90,6 @@ export default function Hero() {
           </div>
         </Reveal>
       </div>
-
-      <a
-        href="#experience"
-        aria-label="Scroll to experience"
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-zinc-600 transition hover:text-accent sm:block"
-      >
-        <FaArrowDown className="h-4 w-4" />
-      </a>
     </section>
   );
 }
