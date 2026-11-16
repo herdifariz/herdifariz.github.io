@@ -1,3 +1,7 @@
+import paceLabsImage from "../assets/pacelabs.webp";
+import vitImage from "../assets/vit.webp";
+import medikanImage from "../assets/medikan.webp";
+
 export type Project = {
   title: string;
   subtitle: string;
@@ -13,7 +17,7 @@ export const projects: Project[] = [
     title: "PaceLabs",
     subtitle: "Personal Project · Web Development",
     period: "2025 - Present",
-    image: "src/assets/pacelabs.webp",
+    image: paceLabsImage,
     points: [
       "Developed a personal portfolio website to showcase my skills, projects, and professional background.",
     ],
@@ -31,7 +35,7 @@ export const projects: Project[] = [
     title: "Vision Transformer for Coffee Leaf Disease Classification",
     subtitle: "Undergraduate Thesis · Computer Vision",
     period: "2026",
-    image: "src/assets/vit.webp",
+    image: vitImage,
     points: [
       "Built an image classification model using a Vision Transformer (ViT) architecture to identify diseases and nutrient deficiencies in coffee leaves.",
       "Implemented preprocessing, training, and performance evaluation with Python and PyTorch.",
@@ -43,7 +47,7 @@ export const projects: Project[] = [
     title: "MediKan — Fish Medical Assistant",
     subtitle: "Bangkit Academy Capstone · Cloud Computing",
     period: "2024 (Deprecated)",
-    image: "src/assets/medikan.webp",
+    image: medikanImage,
     points: [
       "Developed the backend with Express.js and MySQL, integrating a Flask service for machine learning inference.",
       "Deployed backend services on Google Cloud Platform using App Engine and Cloud Run.",
